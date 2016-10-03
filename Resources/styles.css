@@ -1,0 +1,53 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+div {
+	font-family: arial, sans-serif;
+}
+
+.container{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.option_box{
+	position: relative;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+form div{
+	margin: 15px;
+}
+
+#date input{
+	margin: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
