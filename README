@@ -1,0 +1,16 @@
+Bolsa - README.TXT
+
+Para probar el código ve a la siguiente dirección:
+	http://dandarkus.heliohost.org/Bolsa/
+
+Archivos que se incluyen en el proyecto:
+
+	Resources:
+		php-stock-market-api-master:
+			class.stockMarketAPI.php
+			index.php
+		Comparable.php
+		script.js
+		SortingMethods.php
+		styles.css
+	index.php	
