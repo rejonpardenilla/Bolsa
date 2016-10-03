@@ -280,7 +280,7 @@
 
 
 
-
+/*
 		//Quick sort
 		public function quick($array){
 			$top = 0;
@@ -347,12 +347,52 @@
 			$array[$index] = $array[$next];
 			$array[$next] = $aux;
 		}
+*/
 
 
 
 
+		//Quick sort
+		public function quicksort( $array ) {
+		    if( count( $array ) < 2 ) {
+		        return $array;
+		    }
+		    $left = $right = array( );
+		    reset( $array );
+		    $pivot_key  = key( $array );
+		    $pivot  = array_shift( $array );
+		    foreach( $array as $k => $v ) {
+		        if( $v->compareTo($pivot, false) < 0 )
+		            $left[$k] = $v;
+		        else
+		            $right[$k] = $v;
+		    }
+		    return array_merge($this->quicksort($left), 
+		    	array($pivot_key => $pivot), 
+		    	$this->quicksort($right) );
+		}
 
-		//Other algorithm:
+
+		public function r_quicksort( $array ) {
+		    if( count( $array ) < 2 ) {
+		        return $array;
+		    }
+		    $left = $right = array( );
+		    reset( $array );
+		    $pivot_key  = key( $array );
+		    $pivot  = array_shift( $array );
+		    foreach( $array as $k => $v ) {
+		        if( $v->compareTo($pivot, true) < 0 )
+		            $left[$k] = $v;
+		        else
+		            $right[$k] = $v;
+		    }
+		    return array_merge($this->quicksort($left), 
+		    	array($pivot_key => $pivot), 
+		    	$this->quicksort($right) );
+		}
+
 
 	}
+
  ?>

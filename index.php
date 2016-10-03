@@ -103,13 +103,13 @@ if( isset($_POST["symbol"]) &&
 					$stockMarketData = $sortBy->r_merge($stockMarketData);
 					break;
 				case 'quick':
-					$stockMarketData = $sortBy->r_insertion($stockMarketData);
+					$stockMarketData = $sortBy->r_merge($stockMarketData);
 					break;
 				case 'direct_merge':
-					$stockMarketData = $sortBy->r_bubble($stockMarketData);
+					$stockMarketData = $sortBy->r_merge($stockMarketData);
 					break;
 				case 'natural_merge':
-					$stockMarketData = $sortBy->r_shell($stockMarketData);
+					$stockMarketData = $sortBy->r_merge($stockMarketData);
 					break;
 				default:
 					break;
@@ -129,13 +129,13 @@ if( isset($_POST["symbol"]) &&
 					$stockMarketData = $sortBy->merge($stockMarketData);
 					break;
 				case 'quick':
-					$stockMarketData = $sortBy->insertion($stockMarketData);
+					$stockMarketData = $sortBy->quicksort($stockMarketData);
 					break;
 				case 'direct_merge':
-					$stockMarketData = $sortBy->bubble($stockMarketData);
+					$stockMarketData = $sortBy->merge($stockMarketData);
 					break;
 				case 'natural_merge':
-					$stockMarketData = $sortBy->shell($stockMarketData);
+					$stockMarketData = $sortBy->merge($stockMarketData);
 					break;
 				default:
 					break;
